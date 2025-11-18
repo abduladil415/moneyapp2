@@ -1,0 +1,55 @@
+.app-shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+  background: #f5f7fb;
+}
+
+.app-shell__nav {
+  background: #101828;
+  color: white;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.nav-link {
+  border: none;
+  background: transparent;
+  color: #cbd5f5;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.nav-link--active {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.app-shell__main {
+  padding: 32px;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+  .app-shell__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .nav-link {
+    flex: 1;
+    text-align: center;
+  }
+}
